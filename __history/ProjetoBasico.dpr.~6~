@@ -1,0 +1,18 @@
+program ProjetoBasico;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'UPrincipal.pas' {Principal},
+  UCadastroClientes in 'UCadastroClientes.pas' {fCadastroClientes},
+  UDataModulo in 'UDataModulo.pas' {fDataModulo: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TPrincipal, Principal);
+//  Application.CreateForm(TfCadastroClientes, fCadastroClientes);
+  Application.CreateForm(TfDataModulo, fDataModulo);
+  Application.Run;
+end.

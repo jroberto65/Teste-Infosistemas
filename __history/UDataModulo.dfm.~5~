@@ -1,0 +1,39 @@
+object fDataModulo: TfDataModulo
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object Conexao: TSQLConnection
+    ConnectionName = 'FBConnection'
+    DriverName = 'Firebird'
+    GetDriverFunc = 'getSQLDriverINTERBASE'
+    LibraryName = 'dbxfb.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Firebird'
+      'Database=D:\Desenvolvimento\Basico\DB\ProjetoBasico.fdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'IsolationLevel=ReadCommitted'
+      'Trim Char=False')
+    VendorLib = 'fbclient.dll'
+    Left = 24
+    Top = 32
+  end
+  object ADOConexao: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;User ID=SYSDBA;Initial Catalog=SISTEMADELOJA;Data Sourc' +
+      'e=JROBERTO_HOME\SQLEXPRESS2012'
+    Provider = 'SQLOLEDB.1'
+    Left = 104
+    Top = 40
+  end
+end

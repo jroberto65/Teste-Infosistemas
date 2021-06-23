@@ -1,0 +1,16 @@
+program ProjetoBasico;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'UPrincipal.pas' {Principal},
+  UCadastroClientes in 'UCadastroClientes.pas' {CadastroClientes};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(TCadastroClientes, CadastroClientes);
+  Application.Run;
+end.
